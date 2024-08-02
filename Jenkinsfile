@@ -21,7 +21,7 @@ pipeline{
 			steps {
 				sh "trivy fs ."
 				sh "trivy image flask-app"
-				sh "trivy image -f json -o results.json flask app"
+				sh "trivy image -f json -o results.json flask-app"
 			}
 		}
 	}
