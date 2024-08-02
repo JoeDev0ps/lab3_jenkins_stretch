@@ -22,6 +22,8 @@ pipeline{
 				sh "trivy fs ."
 				sh "trivy image flask-app"
 				sh "trivy image -f json -o results.json flask-app"
+				sh "sudo apt install zip || true"
+				sh "zip scanresults.zip results.json"
 			}
 		}
 	}
