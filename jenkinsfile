@@ -1,0 +1,3 @@
+cleanup || true
+build images
+run containers
